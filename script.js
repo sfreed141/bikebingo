@@ -31,9 +31,18 @@ function generateBingoSet(membersData) {
 function generateCard(membersData) {
     let bingoSet = generateBingoSet(membersData);
 
+
     var html = '';
     for (var i = 0; i < bingoSet.length; i++) {
-        html += '<div class="bingoCard__square">' + i + ': ' + bingoSet[i].name + '</div>';
+        html +=
+`<div class="bingoCard__square">
+    <div class="bingoCard__squareInner">
+        <div class="bingoCard__textWrapper">
+            <span>${i}: ${bingoSet[i].name}</span>
+        </div>
+    </div>
+</div>
+`
     }
     $('.bingoCard').html(html);
 
