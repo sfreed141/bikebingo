@@ -1,0 +1,95 @@
+.bingoCard {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: 50px;
+}
+
+.bingoCard div {
+    place-self: center;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.about h1 {
+    text-align: center;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 40px 15px;
+    background: linear-gradient(45deg, tomato, #ffa947);
+    color: white;
+    font-size: 40px;
+}
+
+.about p {
+    font-family: sans-serif;
+    width: calc(100% - 60px);
+    margin: auto;
+    max-width: 666px;
+    text-align: center;
+    line-height: 24px;
+}
+
+.about p a {
+    color: tomato;
+    font-weight: bold;
+}
+
+.generateCardButton {
+    margin: auto;
+    display: block;
+    margin-top: 30px;
+    border: 2px solid tomato;
+    background: tomato;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px 30px;
+    margin-bottom: 40px;
+    transition: all .2s;
+}
+
+.generatedCardButton:hover {
+    background: white;
+    color: tomato;
+}
+
+.bingoCard {
+    width: calc(100% - 60px);
+    margin: auto;
+    max-width: 1000px;
+    grid-auto-rows: auto !important;
+    border: 1px solid gray;
+    margin-bottom: 40px;
+}
+
+.bingoCard__square {
+    width: 100%;
+    place-self: auto;
+    height: auto;
+    border: 1px solid grey !important;
+    box-sizing: border-box;
+}
+
+.bingoCard__square:nth-of-type(2n) {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.bingoCard__squareInner {
+    height: 0;
+    padding-top: 100%;
+    position: relative;
+    width: 100%;
+}
+
+.bingoCard__textWrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 30px);
+    text-align: center;
+}
