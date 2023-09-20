@@ -1,6 +1,10 @@
+const cityId = "3";
+const mapCenter = { lat: 47.6062, lon: -122.3321 };
+const mapZoom = 10;
+
 var members = null;
-$.getJSON('https://bicyclebenefits.org/members',{categories: "", city_id: "3", member: ""})
-    .done(function(data, status, headers, config) {
+$.getJSON('https://bicyclebenefits.org/members',{categories: "", city_id: cityId, member: ""})
+    .done(function(data, _status, _headers, _config) {
         members = data.members;
         $('.generateCardButton').attr('disabled', false);
         generateCard(members);
@@ -45,7 +49,7 @@ function generateCard(membersData) {
 
     var mapLayout = {
         dragmode: "zoom",
-        mapbox: { style: "open-street-map", center: { lat: 47.6062, lon: -122.3321 }, zoom: 9 },
+        mapbox: { style: "open-street-map", center: mapCenter, zoom: mapZoom },
         margin: { r: 0, t: 0, b: 0, l: 0 }
     }
 
