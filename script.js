@@ -38,7 +38,7 @@ function generateCard(membersData) {
 `<div class="bingoCard__square">
     <div class="bingoCard__squareInner">
         <div class="bingoCard__textWrapper">
-            <span>${i}: ${bingoSet[i].name}</span>
+            <span>${i + 1}: ${bingoSet[i].name}</span>
         </div>
     </div>
 </div>
