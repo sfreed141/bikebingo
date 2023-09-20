@@ -1,0 +1,48 @@
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Seattle Bike Bingo Generator</title>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.plot.ly/plotly-2.25.2.min.js" charset="utf-8"></script>
+
+  <style>
+    .bingoCard {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-auto-rows: 50px;
+    }
+
+    .bingoCard div {
+      /* border: 2px solid gray; */
+      place-self: center;
+    }
+  </style>
+</head>
+<body>
+<div class="about">
+  <h1>Seattle Bike Bingo Generator</h1>
+  <p>
+Bicycle Benefits used to create a physical bingo card which was a fun way to encourage
+exploration of the city by bike. This site generates a bingo card for you based on the list of participating
+locations (fetched September 2023, but see the <a href="https://www.bicyclebenefits.org/cities/3">Bicycle Benefits site</a> for the most up-to-date list).
+
+You can download the raw data from <a href="https://www.bicyclebenefits.org/members">https://www.bicyclebenefits.org/members</a> (Seattle's city id is 3).
+</p>
+</div>
+
+<br />
+<button class="generateCardButton" disabled="true">
+  Generate Bingo Card
+</button>
+<div class="bingoCard">
+</div>
+
+<!-- TODO export the card/map -->
+
+<div id="bingoMap" class="bingoMap">
+</div>
+
+<script src="./script.js"></script>
+</body>
+</html>
